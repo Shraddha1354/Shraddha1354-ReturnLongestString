@@ -7,7 +7,19 @@ public class ReturnLongestString {
      * @param arr an array of Strings.
      * @return the longest String within arr. You can assume that there are no ties for the longest string.
      */
-    public String longest(String[] arr){
-        return null;
+    public String longest(String[] arr) {
+        if (arr == null || arr.length == 0) {
+            return null; 
+        }
+
+        String longestString = arr[0]; 
+
+        for (String str : arr) {
+            if (str.length() > longestString.length()) {
+                longestString = str; 
+            }
+        }
+
+        return longestString;
     }
 }
